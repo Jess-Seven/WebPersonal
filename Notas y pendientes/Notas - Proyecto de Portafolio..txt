@@ -5,3 +5,7 @@ Notas - Proyecto de Portafolio.
 estar no solo en ese botón si no también en el apartado de Contact que esta en la barra de navegación.
 - Debo Crear una foto de mi que pueda agregar poara el fondo de la sección main de mi web.
 - Realizar un apartado en el navbar para integrar mi CV. Este es aparte de lo que haya plasmado en la web.
+
+
+
+---------- CAMBIOO -----------
