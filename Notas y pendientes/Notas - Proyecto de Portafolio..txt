@@ -5,3 +5,13 @@ Notas - Proyecto de Portafolio.
 estar no solo en ese botón si no también en el apartado de Contact que esta en la barra de navegación.
 - Debo Crear una foto de mi que pueda agregar poara el fondo de la sección main de mi web.
 - Realizar un apartado en el navbar para integrar mi CV. Este es aparte de lo que haya plasmado en la web.
+- En la sección de la pagina donde esta el carrusel utilizarlo para mostrar una linea de tiempo
+
+
+Puntos mostrar en la pagina.
+
+1. hero section
+2. Resumen profesional
+3. tarjetas de principales proyectos realizados
+4. Linea de tiempo de mi carrera como profesional no solo de lo que estudie sino también de lo que me dedique en otras áreas.
+5. footer de la pagina.
