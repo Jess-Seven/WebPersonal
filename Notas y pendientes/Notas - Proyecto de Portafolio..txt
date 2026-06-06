@@ -1,0 +1,7 @@
+Notas - Proyecto de Portafolio.
+
+- Buscar entre los videos de los canales de desarrollo de software que veo para aprender a programar el repositorio de portfolio website de GitHub.
+- Integrar un botón flotante que lleve a un whatsApp personal donde se puedan contactar con mi persona. Esta accesibilidad debe de
+estar no solo en ese botón si no también en el apartado de Contact que esta en la barra de navegación.
+- Debo Crear una foto de mi que pueda agregar poara el fondo de la sección main de mi web.
+- Realizar un apartado en el navbar para integrar mi CV. Este es aparte de lo que haya plasmado en la web.
