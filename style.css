@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definicion de la paleta de colores (Variables grobales) */
+:root {
+    --bg-principal: #0b1320;       /* 60% - Fondo general (Gris oscuro con un toque azulado) */
+    --bg-tarjetas: #152238;        /* 30% - Fondo de tarjetas (Tono intermedio para dar profundidad) */
+    --color-acento: #10b981;       /* 10% - Verde Esmeralda brillante para botones, enlaces e hitos */
+    --color-acento-hover: #059669; /* Verde más oscuro para cuando pases el mouse por encima */
+    --texto-principal: #f8fafc;    /* Blanco suave para lectura cómoda */
+    --texto-secundario: #94a3b8;   /* Gris claro para textos secundarios y fechas */
+}
+
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(11,19,32,0.8);
+    backdrop-filter: blur(10px);
+}
+
+.navbar .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-acento);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-acento);
+}
+
