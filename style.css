@@ -6,12 +6,18 @@
 
 /* Definicion de la paleta de colores (Variables grobales) */
 :root {
-    --bg-principal: #0b1320;       /* 60% - Fondo general (Gris oscuro con un toque azulado) */
-    --bg-tarjetas: #152238;        /* 30% - Fondo de tarjetas (Tono intermedio para dar profundidad) */
-    --color-acento: #10b981;       /* 10% - Verde Esmeralda brillante para botones, enlaces e hitos */
-    --color-acento-hover: #059669; /* Verde más oscuro para cuando pases el mouse por encima */
-    --texto-principal: #f8fafc;    /* Blanco suave para lectura cómoda */
-    --texto-secundario: #94a3b8;   /* Gris claro para textos secundarios y fechas */
+    --bg-principal: #0b1320;
+    /* 60% - Fondo general (Gris oscuro con un toque azulado) */
+    --bg-tarjetas: #152238;
+    /* 30% - Fondo de tarjetas (Tono intermedio para dar profundidad) */
+    --color-acento: #10b981;
+    /* 10% - Verde Esmeralda brillante para botones, enlaces e hitos */
+    --color-acento-hover: #059669;
+    /* Verde más oscuro para cuando pases el mouse por encima */
+    --texto-principal: #f8fafc;
+    /* Blanco suave para lectura cómoda */
+    --texto-secundario: #94a3b8;
+    /* Gris claro para textos secundarios y fechas */
 }
 
 
@@ -39,7 +45,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background-color: rgba(11,19,32,0.8);
+    background-color: rgba(11, 19, 32, 0.8);
     backdrop-filter: blur(10px);
 }
 
@@ -93,6 +99,7 @@ header {
 }
 
 .btn-hero {
+    
     background-color: var(--color-acento);
     color: #0b1320;
     border: none;
@@ -102,6 +109,11 @@ header {
     border-radius: 6px;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-hero a {
+    text-decoration: none;
+    color: var(--bg-principal);
 }
 
 .btn-hero:hover {
@@ -117,8 +129,8 @@ header {
 }
 
 /* 🖥️ RESPONSIVE: Cuando la pantalla sea grande, se ponen de lado a lado */
-@media (min-width: 768px) {
-    .hero{
+@media (min-width: 768px) { 
+    .hero {
         flex-direction: row;
         text-align: left;
     }
@@ -130,6 +142,11 @@ header {
     .hero-img {
         flex: 1;
         max-width: 500px;
+    }
+
+    .btn-hero a{
+        text-decoration: none;
+        color: var(--bg-principal);
     }
 
     .professionalPresentation {
@@ -159,5 +176,97 @@ header {
         text-align: justify;
     }
 
-    
+    .career-timeline {
+        padding: 80px 0;
+        background-color: var(--bg-principal);
+    }
+
+    .timeline-title {
+        font-family: 'Goldman', sans-serif;
+        text-align: center;
+        font-size: 2.2rem;
+        color: var(--texto-principal);
+        margin-bottom: 60px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .timeline-container {
+        position: relative;
+        padding-left: 40px;
+    }
+
+    /* Linea vertical esmeralda */
+    .timeline-container::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        /* Position de la linea */
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(to bottom, var(--color-acento), transparent);
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    /* El punto circular en la linea */
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -37px;
+        /* alineado con la linea vertical */
+        top: 5px;
+        width: 16px;
+        height: 16px;
+        background-color: var(--bg-principal);
+        border: 3px solid var(--color-acento);
+        border-radius: 50%;
+        z-index: 2;
+        transition: transform 0.3s ease;
+    }
+
+    /* Efecto cunado pasa el mouse por el hito */
+    .timeline-item:hover::before {
+        transform: scale(1.4);
+        background-color: var(--color-acento);
+    }
+
+    /* Estilo de la fecha */
+    .timeline-date {
+        display: inline-block;
+        font-family: 'Goldman', sans-serif;
+        color: var(--color-acento);
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .timeline-content {
+        background-color: var(--bg-tarjetas);
+        padding: 25px;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-item:hover .timeline-content {
+        transform: translateX(10px); 
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .timeline-content h3 {
+        color: var(--texto-secundario);
+        font-size: 1rem;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
+    .timeline-content p {
+        color: var(--texto-secundario);
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
 }
