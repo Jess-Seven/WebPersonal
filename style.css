@@ -272,20 +272,20 @@ header {
 
     /* Proyectos (Portafolio cards) */
     .main-projects {
-        padding: 80px 0;
+        padding: 20px 0;
     }
 
     .projects-title {
         font-family: 'Goldman', sans-serif;
         text-align: center;
         font-size: 2.2rem;
-        margin-bottom: 50px;
+        margin-bottom: 120px;
         color: var(---texto-principal);
     }
 
     .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1rf));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 30px;
     }
 
@@ -295,6 +295,8 @@ header {
         overflow: hidden;
         border: 1px solid rgba(255, 255, 255, 0.05);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
     }
 
     .portfolio-card:hover {
@@ -316,6 +318,9 @@ header {
 
     .card-content {
         padding: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
     }
 
     .card-content h3 {
@@ -330,7 +335,6 @@ header {
         line-height: 1.6;
         color: var(--texto-secundario);
         margin-bottom: 20px;
-        height: 30px;
     }
 
     .tech-tags {
@@ -361,10 +365,68 @@ header {
         border-radius: 6px;
         font-weight: bold;
         transition: all 0.3s ease;
+        margin-top: auto;
     }
 
     .btn-project:hover {
         background-color: var(--color-acento);
         color:#0b1320;
     }
+
 }
+
+/* ==========================================================================
+   9. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+
+footer {
+    background-color: #05080f;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px 0;
+    margin-top: 80px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Por defecto en móvil va en columna */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer-credits p, 
+.footer-copy p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    letter-spacing: 0.5px;
+}
+
+.footer-socials ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-socials a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--color-acento);
+}
+
+/* 🖥️ RESPONSIVE: Forzamos la fila horizontal en pantallas de escritorio */
+@media screen and (min-width: 768px) {
+    .footer-container {
+        flex-direction: row !important; /* Cambia a fila */
+        gap: 0;
+    }
+} 
