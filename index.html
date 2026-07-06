@@ -27,10 +27,9 @@
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Portfolio</a></li>
+                <li><a href="#summary">Resumen</a></li>
+                <li><a href="#experience">Carrera & experiencia</a></li>
+                <li><a href="#projects">Proyectos</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +38,7 @@
         <section class="hero container" id="home">
             <div class="hero-text">
                 <h1>Portafolio de Programador Web</h1>
-                <p>Tecnólogo en Desarrollo de Software con experiencia en desarrollo web</p>
+                <p>Tecnólogo en Desarrollo de Software con experiencia en desarrollo web frontend</p>
                 <button class="btn-hero"><a href="https://github.com/Jess-Seven" target="_blank">Repositorios de
                         GitHub</a></button>
             </div>
@@ -47,7 +46,7 @@
                 class="hero-img">
         </section>
 
-        <section class="professionalPresentation container">
+        <section class="professionalPresentation container" id="summary">
             <div class="aboutMe">
                 <h2>Resumen Profesional</h2>
                 <p>Tecnólogo en Desarrollo de Software enfocado en el desarrollo web y el diseño de interfaces
@@ -65,7 +64,7 @@
             </div>
         </section>
 
-        <section class="career-timeline">
+        <section class="career-timeline" id="experience">
             <h2 class="timeline-title">Mi carrera & experiencia</h2>
 
             <div class="timeline-container container">
@@ -141,7 +140,7 @@
             </div>
         </section>
 
-        <section class="main-projects container">
+        <section class="main-projects container" id="projects">
             <h2 class="projects-title">Proyectos Principales</h2>
 
             <div class="projects-grid">
@@ -236,10 +235,11 @@
     <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.querySelector('.nav-links');
+        const enlaces = document.querySelectorAll('.nav-links a');
 
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            hamburger.classList.toggle('open')
+            hamburger.classList.toggle('open');
         });
 
         // Opcional: Cerrar el menú automáticamente cuando se hace clic en un enlace
@@ -249,6 +249,22 @@
                 hamburger.classList.remove('open');
             });
         });
+
+        enlaces.forEach(enlace => {
+            enlace.addEventListener('click', () => {
+                const enlaceActivo = document.querySelector('.nav-links a.active');
+
+                if(enlaceActivo) {
+                    enlaceActivo.classList.remove('active');
+                }
+
+                enlace.classList.add('active');
+
+                nav-links.classList.remove('active');
+                hamburger.classList.remove('open');
+            });
+        });
+
     </script>
 
 </body>
